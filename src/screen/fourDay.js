@@ -52,6 +52,7 @@ function FourDays() {
       setWeather(update);
       console.log("setWeather", Array.isArray(newWeather), newWeather); //object
       console.log(newWeather.list[0].temperature.high); // 34
+      console.log(newWeather.list[0].forecast);
       console.log("list", Array.isArray(newWeather.list), newWeather.list);
       //   let temperature = setWeather(update);
       //   console.log(temperature);
@@ -77,6 +78,7 @@ function FourDays() {
       <section>
         <h2>4-Day Outlook</h2>
         <h2>{newWeather.list[0].temperature.high}</h2>
+        <h2>{newWeather.list[0].forecast}</h2>
         <DayOneScreen screen={newWeather} />
         <DayTwoScreen screen={newWeather} />
         <DayThreeScreen screen={newWeather} />
